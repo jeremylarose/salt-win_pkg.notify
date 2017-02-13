@@ -1,0 +1,1 @@
+eventcreate /T Information /ID 125 /L Application /SO SaltMinion /D "salt-call pkg.list_upgrades ran"

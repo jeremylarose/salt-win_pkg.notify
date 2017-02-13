@@ -1,0 +1,1 @@
+eventcreate /T Information /ID 127 /L Application /SO SaltMinion /D "salt task has completed"

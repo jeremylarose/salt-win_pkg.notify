@@ -1,0 +1,62 @@
+<html>
+<head>
+<title>Software updating...</title>
+<hta:application
+  applicationname="Sample"
+  scroll="no"
+  singleinstance="yes"
+  windowstate="normal"
+  SysMenu=”no”
+>
+
+<script type="text/javascript">
+    window.resizeTo(300,100);
+</script>
+
+<script language="vbscript">
+Sub Window_onLoad
+  'your code here
+End Sub
+</script>
+
+<style type="text/css">
+* {
+  font-size: 1px;
+  margin: 1px;
+}
+div {
+  position: absolute;
+  left: 15%;
+  top: 50%;
+}
+marquee {
+  border: 1px solid;
+  height: 15px;
+  width: 200px;
+}
+marquee span {
+  height: 11px;
+  width: 8px;
+  background: Highlight;
+  float: left;
+}
+.handle-0 { filter: alpha(opacity=20); -moz-opacity: 0.20; }
+.handle-1 { filter: alpha(opacity=40); -moz-opacity: 0.40; }
+.handle-2 { filter: alpha(opacity=60); -moz-opacity: 0.6; }
+.handle-3 { filter: alpha(opacity=80); -moz-opacity: 0.8; }
+.handle-4 { filter: alpha(opacity=100); -moz-opacity: 1; }
+</style>
+</head>
+
+<body>
+<div>
+<marquee direction="right" scrollamount="8" scrolldelay="100">
+  <span class="handle-0"></span>
+  <span class="handle-1"></span>
+  <span class="handle-2"></span>
+  <span class="handle-3"></span>
+  <span class="handle-4"></span>
+</marquee>
+</div>
+</body>
+</html>
