@@ -34,7 +34,7 @@ popd
 
 :: add entry to windows programs
 reg.exe add "HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\salt-win_pkg.notify" /v "DisplayName" /t REG_SZ /d "Salt win_pkg.notify" /f
-reg.exe add "HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\salt-win_pkg.notify" /v "DisplayVersion" /t REG_SZ /d "1.01" /f
+reg.exe add "HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\salt-win_pkg.notify" /v "DisplayVersion" /t REG_SZ /d "1.0.1" /f
 reg.exe add "HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\salt-win_pkg.notify" /v "UninstallString" /t REG_SZ /d "C:\salt\remove_salt-win_pkg.notify.bat" /f
 reg.exe add "HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\salt-win_pkg.notify" /v "URLInfoAbout" /t REG_SZ /d "https://github.com/jeremylarose/salt-win_pkg.notify" /f
 reg.exe add "HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\salt-win_pkg.notify" /v "Publisher" /t REG_SZ /d "Jeremy Larose" /f
