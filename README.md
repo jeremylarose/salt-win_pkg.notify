@@ -20,15 +20,24 @@ should work out of the box, only differences you need to make is not use any "La
 for software that can't install if already open add something like this to the installers (also see autopkg recipes for auto generated packages... https://github.com/jeremylarose/autopkg-recipes)....
 
 :: quit installer if application is running, else continue....
+
 tasklist.exe /FI "IMAGENAME eq KeePass.exe" 2>NUL | find /I /N "KeePass.exe" || goto notrunning
+
 EXIT
+
 :notrunning
+
 
 for software that requires a reboot, add something like this to the salt state, example...
 
 'echo {{ model }} - DriverPack >> c:\salt\win_pkg.notify\reboot_required':
+
   cmd.run:
+  
     - onchanges:
+    
       - file: 'c:\salt\drivers\{{ model }}.exe'
+      
     - onlyif:
+    
       - 'if not exist "c:\salt\win_pkg.notify\reboot_required" MD; 2>NUL'
