@@ -41,3 +41,7 @@ for software that requires a reboot, add something like this to the salt state, 
     - onlyif:
     
       - 'if not exist "c:\salt\win_pkg.notify\reboot_required" MD; 2>NUL'
+      
+    - unless:
+    
+      - 'type C:\salt\win_pkg.notify\reboot_required | find "{{ model }} - DriverPack"'
